@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><title>规则配置 · 残障辅助器具借用与维护管理系统</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="side"><div class="brand">辅具驿站 · 管理平台</div><div class="grp">工作台</div><a href="/pages/dashboard.html">辅具服务看板</a><div class="grp">器具资源</div><a href="/pages/device-list.html">器具资源目录</a><a href="/pages/inspection.html">检测消毒记录</a><a href="/pages/reservation.html">库存预留</a><div class="grp">借用业务</div><a href="/pages/apply-list.html">借用维护单</a><a href="/pages/apply-form.html">新建借用申请</a><a href="/pages/assessment.html">适配评估表</a><a href="/pages/approval.html">借用审批台</a><a href="/pages/handover.html">交接管理</a><a href="/pages/return.html">归还检查</a><div class="grp">维护管理</div><a href="/pages/repair.html">故障维修工单</a><a href="/pages/lifecycle.html">适配与维护提醒</a><a href="/pages/feedback.html">回访评价</a><div class="grp">系统</div><a href="/pages/rule-config.html" class="on">规则配置</a><a href="/pages/user.html">用户与角色</a><a href="/pages/profile.html">个人中心</a></div>
+<div class="top"><div class="crumb">残障辅助器具 / <b>系统 / 规则配置</b></div><div class="r"><span>站内消息 3</span><span>帮助</span><div class="avatar">王</div><span>王仓管 · 仓管员</span></div></div>
+<div class="main"><h1 class="page">规则配置 · 适配度与维护周期联合提醒</h1><div class="sub">权重合计必须等于 100%，修改后记录版本与生效时间</div>
+<div class="grid2"><div class="card"><div class="ct">权重配置（当前版本 V3）</div>
+<table><thead><tr><th>输入因素</th><th>数据来源</th><th>权重</th><th>缺失处理</th></tr></thead><tbody>
+<tr><td>需求类别</td><td>借用申请</td><td><input value="25" style="width:80px;height:30px;border:1px solid #DCE3E8;border-radius:6px;padding:0 8px">%</td><td>不参与计算并提示补录</td></tr>
+<tr><td>使用者条件</td><td>使用人档案</td><td><input value="20" style="width:80px;height:30px;border:1px solid #DCE3E8;border-radius:6px;padding:0 8px">%</td><td>不参与计算并提示补录</td></tr>
+<tr><td>器具规格</td><td>器具台账</td><td><input value="15" style="width:80px;height:30px;border:1px solid #DCE3E8;border-radius:6px;padding:0 8px">%</td><td>取同类别均值</td></tr>
+<tr><td>累计借用天数</td><td>历史单据</td><td><input value="15" style="width:80px;height:30px;border:1px solid #DCE3E8;border-radius:6px;padding:0 8px">%</td><td>按 0 天计</td></tr>
+<tr><td>历史故障</td><td>维修工单</td><td><input value="15" style="width:80px;height:30px;border:1px solid #DCE3E8;border-radius:6px;padding:0 8px">%</td><td>按无故障计</td></tr>
+<tr><td>最近维护日期</td><td>检测记录</td><td><input value="10" style="width:80px;height:30px;border:1px solid #DCE3E8;border-radius:6px;padding:0 8px">%</td><td>不参与计算并提示补录</td></tr>
+</tbody></table>
+<div style="margin-top:12px;display:flex;gap:10px;align-items:center"><b>合计 100%</b><button class="btn pri">保存并发布新版本</button><button class="btn">重置</button></div></div>
+<div class="card"><div class="ct">版本历史</div>
+<table><thead><tr><th>版本</th><th>生效时间</th><th>修改人</th><th>说明</th></tr></thead><tbody>
+<tr><td>V3</td><td>2026-10-01 00:00:00</td><td>刘管理</td><td>提高需求类别权重至 25%</td></tr>
+<tr><td>V2</td><td>2026-08-01 00:00:00</td><td>刘管理</td><td>新增最近维护日期因素</td></tr>
+<tr><td>V1</td><td>2026-06-01 00:00:00</td><td>系统</td><td>初始版本</td></tr></tbody></table>
+<div class="ct" style="margin-top:18px">效果统计</div>
+<div class="grid2"><div class="kpi"><div class="lb">推荐采纳率</div><div class="vl">87.3%</div></div><div class="kpi"><div class="lb">人工调整率</div><div class="vl">12.7%</div></div></div></div></div></div></body></html>
